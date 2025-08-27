@@ -287,7 +287,7 @@ If you installed it using rustup, the correct compiler version will be setup aut
 <h2 id="quick-install"><a class="header" href="#quick-install">Quick install</a></h2>
 <p>Install from the GitHub release as root:</p>
 <!--youki release begin-->
-<pre><code class="language-console"># curl -sSfL https://github.com/containers/youki/releases/download/v0.5.4/youki-0.5.4-$(uname -m)-musl.tar.gz | tar -xzvC /usr/bin/ youki
+<pre><code class="language-console"># curl -sSfL https://github.com/containers/youki/releases/download/v0.5.5/youki-0.5.5-$(uname -m)-musl.tar.gz | tar -xzvC /usr/bin/ youki
 </code></pre>
 <!--youki release end-->
 <h2 id="getting-the-source"><a class="header" href="#getting-the-source">Getting the source</a></h2>
@@ -323,12 +323,12 @@ liboci-cli = { git = "https://github.com/containers/Youki.git" }
 <pre><code class="language-console"># in the youki directory
 
 # for rootless mode, which is default
-$ vagrant up
-$ vagrant ssh
+$ vagrant up default
+$ vagrant ssh default
 
 # or if you want to develop in rootful mode
-$ VAGRANT_VAGRANTFILE=Vagrantfile.root vagrant up
-$ VAGRANT_VAGRANTFILE=Vagrantfile.root vagrant ssh
+$ vagrant up rootful
+$ vagrant ssh rootful
 
 # in virtual machine
 $ cd youki
@@ -734,6 +734,7 @@ ENTRYPOINT ["wasm-module.wasm"]
 <tr><td>Eric Fang</td><td>Committer</td><td><a href="https://github.com/yihuaf">@yihuaf</a></td><td>Independent</td></tr>
 <tr><td>Sascha Grunert</td><td>Committer</td><td><a href="https://github.com/saschagrunert">@saschagrunert</a></td><td>Red Hat</td></tr>
 <tr><td>Jorge Prendes</td><td>Committer</td><td><a href="https://github.com/jprendes">@jprendes</a></td><td>Microsoft</td></tr>
+<tr><td>Yusuke Sakurai</td><td>Reviewer</td><td><a href="https://github.com/saku3">@saku3</a></td><td>3-shake</td></tr>
 </tbody></table>
 </div><div style="break-before: page; page-break-before: always;"></div><h1 id="code-of-conduct"><a class="header" href="#code-of-conduct">Code of Conduct</a></h1>
 <p>Youki follows the <a href="https://github.com/cncf/foundation/blob/main/code-of-conduct.md">CNCF Code of Conduct</a>.</p>
